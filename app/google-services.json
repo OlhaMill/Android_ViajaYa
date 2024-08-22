@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "688648465548",
+    "project_id": "examen-3fd0d",
+    "storage_bucket": "examen-3fd0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688648465548:android:2199b24ab53b0aa47bdfa9",
+        "android_client_info": {
+          "package_name": "com.om.examen_olhamilionna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd_nBGQHxqCy0x9fQe5n8b01a66afXH50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688648465548:android:76aad077d0d859267bdfa9",
+        "android_client_info": {
+          "package_name": "com.om.proyecto_olha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd_nBGQHxqCy0x9fQe5n8b01a66afXH50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

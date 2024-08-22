@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:elevation="@dimen/_10dp"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgFondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnEditar"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_55dp"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgFondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgFondo">
+
+        <Button
+            android:id="@+id/btnIntroducirDestino"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:drawableLeft="@drawable/lupa"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="start|center_horizontal"
+            android:text="@string/d_nde_quieres_viajar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24sp"
+            app:cornerRadius="@dimen/_10dp" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/txtDestinos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/top_destinos"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewDestino"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDestinos" />
+
+    <Button
+        android:id="@+id/btnMisViajes"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/ver_mis_viajes"
+        android:textSize="@dimen/_24sp"
+        app:cornerRadius="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="@dimen/_409dp"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginStart="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditar" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="@dimen/_409dp"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginStart="@dimen/_1dp"
+        android:layout_marginEnd="@dimen/_1dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/btnMisViajes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

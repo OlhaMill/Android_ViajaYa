@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/_10dp"
+    tools:context=".NuevoViaje">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_img"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_240dp"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginEnd="@dimen/_32dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageCiudad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            app:srcCompat="@drawable/imagen" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/etxtOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:ems="10"
+        android:hint="@string/origen"
+        android:inputType="text"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUrl" />
+
+    <EditText
+        android:id="@+id/etxtDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:ems="10"
+        android:hint="@string/destino"
+        android:inputType="text"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtOrigen" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etxtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/fecha"
+        android:inputType="date"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtDestino" />
+
+    <Button
+        android:id="@+id/btnAnadirViaje"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:enabled="false"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/a_adir_viaje"
+        android:textSize="@dimen/_20sp"
+        app:cornerRadius="@dimen/_10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_32dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/cancelar"
+        android:textSize="@dimen/_20sp"
+        app:cornerRadius="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtUrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_42dp"
+        android:ems="10"
+        android:hint="@string/url_de_la_imagen"
+        android:inputType="text"
+        android:textSize="@dimen/_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_img" />
+
+    <TextView
+        android:id="@+id/txtUrlImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:includeFontPadding="false"
+        android:text="@string/url_de_la_imagen2"
+        app:layout_constraintBottom_toTopOf="@+id/txtUrl"
+        app:layout_constraintStart_toStartOf="@+id/txtUrl" />
+
+    <TextView
+        android:id="@+id/txtOrigen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/origen2"
+        app:layout_constraintBottom_toTopOf="@+id/etxtOrigen"
+        app:layout_constraintStart_toStartOf="@+id/etxtOrigen" />
+
+    <TextView
+        android:id="@+id/txtDestino"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/destino2"
+        app:layout_constraintBottom_toTopOf="@+id/etxtDestino"
+        app:layout_constraintStart_toStartOf="@+id/etxtDestino" />
+
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/fecha2"
+        app:layout_constraintBottom_toTopOf="@+id/etxtFecha"
+        app:layout_constraintStart_toStartOf="@+id/etxtFecha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

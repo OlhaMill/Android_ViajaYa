@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleViaje">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mapa" />
+
+    <TextView
+        android:id="@+id/txtCiudadRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/ciudad"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_84sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViajeEmpieza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/el_viaje_empezar_en"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/txtCiudadRes" />
+
+    <TextView
+        android:id="@+id/txtDias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/_4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_124sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViajeEmpieza" />
+
+    <TextView
+        android:id="@+id/txtDias2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/d_as"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDias"
+        app:layout_constraintStart_toEndOf="@+id/txtDias"
+        app:layout_constraintTop_toTopOf="@+id/txtDias"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ScrollView
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAnadirNota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_32dp"
+                android:text="@string/notas"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtNotas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:text="@string/notas"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnEditar"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/btnBorrar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <ImageButton
+            android:id="@+id/imgEditar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/editar" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnBorrar"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/btnUbicacion"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnEditar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <ImageButton
+            android:id="@+id/imgBorrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/borrar" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnUbicacion"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        app:cardCornerRadius="@dimen/_10dp"
+        app:cardElevation="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnBorrar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <ImageButton
+            android:id="@+id/imgUbi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ubicacion" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/volver"
+        android:textSize="@dimen/_24sp"
+        app:cornerRadius="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEditarNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/editar_notas"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        app:cornerRadius="@dimen/_10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVolver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAnadirNota"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="@dimen/_2dp" />
+
+    <Button
+        android:id="@+id/btnAnadirNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/a_adir_nota"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_24sp"
+        app:cornerRadius="@dimen/_10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVolver"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditarNota"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="@dimen/_2dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

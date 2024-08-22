@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ViajaYa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="el_viaje_empezar_en">El viaje empezará en</string>
+    <string name="_4">4</string>
+    <string name="d_as">días</string>
+    <string name="notas">Notas:</string>
+    <string name="volver">Volver</string>
+    <string name="editar_notas">Editar notas</string>
+    <string name="a_adir_nota">Añadir nota</string>
+    <string name="d_nde_quieres_viajar">¿Dónde quieres viajar?</string>
+    <string name="top_destinos">Top destinos</string>
+    <string name="ver_mis_viajes">Ver mis viajes</string>
+    <string name="origen">Origen</string>
+    <string name="destino">Destino</string>
+    <string name="fecha">Fecha</string>
+    <string name="a_adir_viaje">Añadir viaje</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="url_de_la_imagen">URL de la imagen</string>
+    <string name="url_de_la_imagen2">URL de la imagen:</string>
+    <string name="origen2">Origen:</string>
+    <string name="destino2">Destino:</string>
+    <string name="fecha2">Fecha:</string>
+    <string name="nota">Nota</string>
+    <string name="introduce_la_nota_para_a_adirla">Introduce la nota para añadirla:</string>
+    <string name="madrid">Madrid</string>
+    <string name="origen_destino">Origen - Destino</string>
+    <string name="_10_de_octubre_2023">10 de octubre 2023</string>
+</resources>
